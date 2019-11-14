@@ -24,6 +24,9 @@ body {
 }
 
 .avatar {
+    height: 200px;
+    width: 200px;
+    overflow: hidden;
     display: flex;
     margin: 0 auto;
     border-radius: 50%;
