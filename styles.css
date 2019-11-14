@@ -82,6 +82,11 @@ nav ul {
     align-items: center;
 }
 
+.contactIcon {
+
+    height: 40px;
+}
+
 .gallery {
     width: 80%;
     display: flex;
