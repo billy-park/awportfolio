@@ -3,7 +3,7 @@ body {
     margin: 0px;
     font-size: 18px;
     color: black;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Arial', sans-serif;
 }
 
 .container {
@@ -19,7 +19,7 @@ body {
     max-width: 20%;
     min-width: 20%;
     height: 100%;
-    background-color: #709189;
+    background-color: #679289;
     color: white;
 }
 
@@ -45,7 +45,7 @@ nav ul {
 .navItem {
     display: flex;
     list-style: none;
-    border-top: 3px solid #17343A;
+    border-top: 3px solid #08353B;
     width: 90%;
     padding-left: 5%;
     padding-right: 5%;
@@ -72,7 +72,7 @@ nav ul {
 }
 
 .contact {
-    border-top: 3px solid #17343A;
+    border-top: 3px solid #08353B;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -99,7 +99,7 @@ nav ul {
     height: 300px;
     margin-top: 20px;
     margin-bottom: 20px;
-    border: 3px solid #709189;
+    border: 3px solid #08353B;
 }
 
 .galleryItemImg {
