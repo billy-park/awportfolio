@@ -30,7 +30,7 @@ body {
     display: flex;
     margin: 0 auto;
     border-radius: 50%;
-    border: 3px solid #17343A;
+    border: 2px solid #17343A;
 
 }
 
@@ -49,19 +49,25 @@ nav ul {
     display: flex;
     list-style: none;
     padding-left: 5%;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
     flex-direction: row;
     justify-content: space-between;
     color: #08353B;
     width: 95%;
+    letter-spacing: 4px;
+    font-weight: bold;
 }
 
 .navItem a {
     padding-right: 5%;
 }
 
-.navItem:hover {
+.navItemLink:hover {
+    color: white;
+}
+
+.navItemLink:active{
     color: white;
 }
 
@@ -86,11 +92,12 @@ nav ul {
 }
 
 .contact {
-    border-top: 3px solid #08353B;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    margin-top: 50px;
+}
+
+.contact li {
+    width: 50%;
+    float: left;
 }
 
 .contactIcon {
@@ -118,7 +125,7 @@ nav ul {
     height: 300px;
     margin-top: 20px;
     margin-bottom: 20px;
-    border: 3px solid #08353B;
+    border: 2px solid #08353B;
     overflow: hidden;
 }
 
@@ -136,4 +143,49 @@ hr {
     border: 1px solid #08353B;
     float: right;
     margin-right: 0px;
+}
+
+.contactHR {
+    width: 50%;
+    float: right;
+}
+
+.contact li {
+    width: 95%;
+}
+
+.contact a {
+    width: 70%;
+}
+
+.navItemContact {
+    display: flex;
+    list-style: none;
+    padding-left: 5%;
+    padding-top: 2px;
+    margin-bottom: 10px;
+    padding-bottom: 2px;
+    flex-direction: row;
+    color: #08353B;
+    width: 95%;
+    letter-spacing: 4px;
+    font-weight: bold;
+    align-content: center;
+    align-items: center;
+}
+
+.navItemContact a {
+    padding-right: 5%;
+}
+
+.navItemContact img {
+    height: 40px;
+    margin-right: 30px;
+}
+
+.navItemContact p {
+    color: white;
+    font-size: 15px;
+    letter-spacing: normal;
+    margin: 0px;
 }
