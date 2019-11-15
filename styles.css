@@ -136,7 +136,7 @@ nav ul {
 
 /* animations */
 
-hr {
+.navHr {
     width: 60%;
     height: 0px;
     color: black;
@@ -145,9 +145,11 @@ hr {
     margin-right: 0px;
 }
 
-.contactHR {
+.contactHr {
     width: 50%;
     float: right;
+    height: 0px;
+    border: 1px solid #08353B;
 }
 
 .contact li {
@@ -188,4 +190,40 @@ hr {
     font-size: 15px;
     letter-spacing: normal;
     margin: 0px;
+}
+
+.navItemContact hr {
+    color: #08353B;
+}
+
+.subheading {
+    display: flex;
+    justify-content: space-evenly !important;
+    align-content: center;
+}
+
+.title h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.subheading h2 {
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 15px;
+    margin: 0px;
+}
+
+.left {
+    width: 25%;
+    border: 1px solid #08353B;
+    height: 0px;
+}
+
+.right {
+    width: 25%;
+    border: 1px solid #08353B;
+    height: 0px;
 }
