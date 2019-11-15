@@ -29,6 +29,7 @@ body {
     overflow: hidden;
     display: flex;
     margin: 0 auto;
+    margin-top: 20px;
     border-radius: 50%;
     border: 2px solid #17343A;
 
@@ -36,7 +37,7 @@ body {
 
 nav {
     width: 100%;
-    padding-top: 20px;
+    margin-top: 50px;
 }
 
 nav ul {
@@ -102,7 +103,7 @@ nav ul {
 
 .contactIcon {
 
-    height: 40px;
+    height: 30px;
 }
 
 .gallery {
@@ -137,7 +138,7 @@ nav ul {
 /* animations */
 
 .navHr {
-    width: 60%;
+    width: 100%;
     height: 0px;
     color: black;
     border: 1px solid #08353B;
@@ -146,7 +147,7 @@ nav ul {
 }
 
 .contactHr {
-    width: 50%;
+    width: 100%;
     float: right;
     height: 0px;
     border: 1px solid #08353B;
@@ -157,7 +158,7 @@ nav ul {
 }
 
 .contact a {
-    width: 70%;
+    white-space: nowrap;
 }
 
 .navItemContact {
@@ -181,7 +182,7 @@ nav ul {
 }
 
 .navItemContact img {
-    height: 40px;
+    height: 30px;
     margin-right: 30px;
 }
 
@@ -198,11 +199,15 @@ nav ul {
 
 .subheading {
     display: flex;
-    justify-content: space-evenly !important;
+    justify-content: space-between !important;
     align-content: center;
+    letter-spacing: 2px;
+    text-align: center;
 }
 
 .title h1 {
+    letter-spacing: 4px;
+    font-size: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -212,18 +217,22 @@ nav ul {
 .subheading h2 {
     padding-left: 5%;
     padding-right: 5%;
-    font-size: 15px;
+    font-size: 18px;
     margin: 0px;
+    font-weight: normal;
+    color: #08353B;
+    white-space: nowrap;
+
 }
 
 .left {
-    width: 25%;
+    width: 100%;
     border: 1px solid #08353B;
     height: 0px;
 }
 
 .right {
-    width: 25%;
+    width: 100%;
     border: 1px solid #08353B;
     height: 0px;
 }
