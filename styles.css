@@ -13,6 +13,7 @@ body {
 .sideBar {
     position: fixed;
     box-sizing: content-box;
+    overflow: hidden;
     padding-top: 20px;
     /*border-right: 3px solid black; */
     width: 20%;
@@ -37,7 +38,7 @@ body {
 
 nav {
     width: 100%;
-    margin-top: 50px;
+    margin-top: 60px;
 }
 
 nav ul {
@@ -49,19 +50,20 @@ nav ul {
 .navItem {
     display: flex;
     list-style: none;
-    padding-left: 5%;
+    padding-left: 10%;
     padding-top: 2px;
     padding-bottom: 2px;
     flex-direction: row;
     justify-content: space-between;
     color: #08353B;
     width: 95%;
-    letter-spacing: 4px;
+    letter-spacing: 5px;
     font-weight: bold;
 }
 
 .navItem a {
     padding-right: 5%;
+    transition: all 250ms;
 }
 
 .navItemLink:hover {
@@ -87,9 +89,10 @@ nav ul {
 }
 
 .about {
-    padding-left: 5%;
-    padding-right: 5%;
-    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-top: 20px;
+    text-align: left;
 }
 
 .contact {
@@ -108,24 +111,23 @@ nav ul {
 
 .gallery {
     width: 80%;
+    padding-top: 1%;
     display: flex;
-    flex-direction: column;
     margin-left: 20%;
     align-content: space-evenly;
-}
-
-.galleryRow {
-    width: 100%;
-    display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
+
 
 .galleryItem {
     width: 300px;
     height: 300px;
     margin-top: 20px;
     margin-bottom: 20px;
+    margin-right: 0.5%;
+    margin-left: 0.5%;
     border: 2px solid #08353B;
     overflow: hidden;
 }
@@ -138,7 +140,7 @@ nav ul {
 /* animations */
 
 .navHr {
-    width: 100%;
+    width: 95%;
     height: 0px;
     color: black;
     border: 1px solid #08353B;
@@ -164,14 +166,14 @@ nav ul {
 .navItemContact {
     display: flex;
     list-style: none;
-    padding-left: 5%;
+    padding-left: 10%;
     padding-top: 2px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     padding-bottom: 2px;
     flex-direction: row;
     color: #08353B;
     width: 95%;
-    letter-spacing: 4px;
+    letter-spacing: 5px;
     font-weight: bold;
     align-content: center;
     align-items: center;
@@ -182,8 +184,8 @@ nav ul {
 }
 
 .navItemContact img {
-    height: 30px;
-    margin-right: 30px;
+    height: 21px;
+    margin-right: 20px;
 }
 
 .navItemContact p {
@@ -206,8 +208,8 @@ nav ul {
 }
 
 .title h1 {
-    letter-spacing: 4px;
-    font-size: 30px;
+    letter-spacing: 6px;
+    font-size: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -215,6 +217,7 @@ nav ul {
 }
 
 .subheading h2 {
+    letter-spacing: 4px;
     padding-left: 5%;
     padding-right: 5%;
     font-size: 18px;
@@ -236,3 +239,54 @@ nav ul {
     border: 1px solid #08353B;
     height: 0px;
 }
+
+.fancybox-thumbs__list {
+    background-color: #679289;
+    float: left;
+}
+
+.fancybox-thumbs {
+    background-color: #679289 !important;
+    float: left;
+
+}
+.fancybox-thumbs-y {
+    background-color: #679289 !important;
+
+}
+
+.test {
+    height: 600px;
+    background-color: transparent;
+}
+
+.switcher {
+    display: none;
+}
+
+.switchLink {
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+}
+
+.fancybox-extra {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Hide while zooming */
+  .fancybox-is-scaling .fancybox-extra {
+    display: none;
+  }
+  
+  /* Push content up */
+  .fancybox-slide--image {
+    padding-bottom: 120px;
+  }
