@@ -2,6 +2,9 @@
 "http://www.w3.org/TR/html4/strict.dtd">
 <html>
     <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="HandheldFriendly" content="true">
         <link rel="stylesheet" type="text/css" href="styles.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
@@ -9,49 +12,83 @@
     <body>
         <div class="container">
             <div class="sideBar">
-                <img class="avatar" src="src/sewnup.jpg">
+                <div class="title">
+                    <h1>ANTHEA WONG</h1>
+                    <div class="subheading">
+                        <hr class="left">
+                        <h2 class="heading">Graphic Designer</h2>
+                        <hr class="right">
+                    </div>
+                </div>
+                <img class="avatar" src="src/avatar2.png">
                 <p class="about">My name is Anthea Wong, I am a Graphic Designer who is passionate about all things creative. I love having a project to work on and seeing it come to fruition. I find myself always wanting to create something, whether it's for fun or work. I am expanding my skills into front end web development.</p>
                 <nav>
-                    <ul>
+                    <ul class="navList">
                         <li class="navItem">
-                            <a active>Projects</a>
-                            <img class="arrow"src="src/down.svg">
+                            <a id="portfolio" class="navItemLink active">PORTFOLIO</a>
+                            <hr class="navHr">
                         </li>
                         <li class="navItem">
-                            <a>Just For Fun</a>
-                            <img class="arrow"src="src/down.svg">
+                            <a id="logos" class="navItemLink">LOGOS</a>
+                        </li>
+                        <li class="navItem">
+                            <a id="branding" class="navItemLink">BRANDING</a>
+                        </li>
+                        <li class="navItem">
+                            <a id="illustrations" class="navItemLink">ILLUSTRATIONS</a>
+                        </li>
+                        <li class="navItem">
+                            <a id="other" class="navItemLink">OTHER</a>
                         </li>
                     </ul>
                 </nav>
                 <div class="contact">
-                    <p>Contact Me</p>
-                    <p>Email - example@example.com</p>
+                    <li class="navItemContact">
+                        <a>CONTACT ME</a>
+                        <hr class="contactHr">
+                    </li>
+                    <li class="navItemContact">
+                        <img src="src/Mail Icon.svg">
+                        <p>anthea_wong@icloud.com</p>
+                    </li>
+                    <li class="navItemContact">
+                        <img src="src/Phone Icon.svg">
+                        <p>07821297401</p>
+                    </li>
                 </div>
             </div>
             <div class="gallery">
-                <div class="galleryRow">
-                    <div class="galleryItem"><a class="imgLink" href="src/Sewn Up Logo.png"><img class="galleryItemImg" src="src/sewnup.jpg"></a></div>
-                    <div class="galleryItem"><a class="imgLink" href="src/Sewn Up Logo.png"><img class="galleryItemImg" src="src/sewnup.jpg"></a></div>
-                    <div class="galleryItem"><a class="imgLink" href="src/Sewn Up Logo.png"><img class="galleryItemImg" src="src/sewnup.jpg"></a></div>
-                    <div class="galleryItem"><a class="imgLink" href="src/Sewn Up Logo.png"><img class="galleryItemImg" src="src/sewnup.jpg"></a></div>
-                </div>
-                <div class="galleryRow">
-                    <div class="galleryItem"><img class="galleryItemImg" src="src/kandm.png"></div>
-                    <div class="galleryItem"><img class="galleryItemImg" src="src/weddingfigure.jpg"></div>
-                    <div class="galleryItem"><img class="galleryItemImg" src="src/sewnup.jpg"></div>
-                    <div class="galleryItem"><img class="galleryItemImg" src="src/ghost.jpg"></div>
-                </div>
-                <div class="galleryRow">
-                    <div class="galleryItem"><img class="galleryItemImg" src="src/sewnup.jpg"></div>
-                    <div class="galleryItem"><img class="galleryItemImg" src="src/ghost.jpg"></div>
-                    <div class="galleryItem"><img class="galleryItemImg" src="src/kandm.png"></div>
-                    <div class="galleryItem"><img class="galleryItemImg" src="src/weddingfigure.jpg"></div>
-                </div>
-                <div class="galleryRow">
-                    <div class="galleryItem"><img class="galleryItemImg" src="src/kandm.png"></div>
-                    <div class="galleryItem"><img class="galleryItemImg" src="src/weddingfigure.jpg"></div>
-                    <div class="galleryItem"><img class="galleryItemImg" src="src/sewnup.jpg"></div>
-                    <div class="galleryItem"><img class="galleryItemImg" src="src/ghost.jpg"></div>
+                    <div class="galleryItem logo"><a data-height="600" data-fancybox="gallery" data-caption="Sewn Up Productions logo"  class="imgLink" href="src/Sewn Up Logo.png"><img class="galleryItemImg" src="src/thunbnails/Sewn Up Logo TN.png"></a></div>
+                    <div class="galleryItem illustration"><a data-height="700" data-fancybox="gallery" data-caption="Ghost illustrations"  class="imgLink" href="src/Ghost.png"><img class="galleryItemImg" src="src/thunbnails/Ghost TN.png"></a></div>
+                    <div class="galleryItem branding"><a data-height="600" data-fancybox="gallery" data-caption="Children in Need poster"  class="imgLink"class="imgLink" href="src/Children in Need.jpg"><img class="galleryItemImg" src="src/thunbnails/Children in Need TN.png"></a></div>
+                    <div class="galleryItem logo"><a data-height="600" data-fancybox="gallery" data-caption="Kiss and Make Up logo"  class="imgLink" href="src/Kiss and Make Up Logo.png"><img class="galleryItemImg" src="src/thunbnails/Kiss and Make Up TN.png"></a></div>
+
+                    <div class="galleryItem branding"><a data-width="600" data-fancybox="gallery" data-caption="Boots Christmas poster for No7 makeover"  class="imgLink" href="src/No7 Xmas.jpg"><img class="galleryItemImg" src="src/thunbnails/No7 Xmas TN.png"></a></div>
+                    <div class="galleryItem branding"><a data-width="600" data-fancybox="gallery" data-caption="Boots Prom poster for No7 makeover"  class="imgLink" href="src/No7 Prom.jpg"><img class="galleryItemImg" src="src/thunbnails/No7 Prom TN.png"></a></div>
+                    <div class="galleryItem other"><a data-height="600" data-fancybox="gallery" data-caption="Front of Sister's Wedding Invitation"  class="imgLink invite" href="src/Invite Front copy.png"><img class="galleryItemImg" src="src/thunbnails/Invite TN.png"></a></div>
+                    <div class="galleryItem other hiddenItem"><a data-height="600" data-fancybox="gallery" data-caption="Back of Sister's Wedding Invitation"  class="imgLink invite" href="src/Invite Back.png"><img class="galleryItemImg" src="src/thunbnails/Invite TN.png"></a></div>
+                    <div class="galleryItem other"><a data-width="600" data-fancybox="gallery" data-caption="Blackboard schedule for Sister's Wedding"  class="imgLink" href="src/blackboard.jpg"><img class="galleryItemImg" src="src/blackboard.jpg"></a></div>
+
+                    <div class="galleryItem other"><a data-height="600" data-fancybox="gallery"  data-caption="Cake topper for Sister's Wedding" class="imgLink" href="src/cake topper.jpg"><img class="galleryItemImg" src="src/thunbnails/Dolls TN.png"></a></div>
+                    <div class="galleryItem logo"><a data-height="600" data-fancybox="gallery"  data-caption="Kent Equestrian Logo" class="imgLink" href="src/The Kent Equestrian logo.png"><img class="galleryItemImg" src="src/thunbnails/Kent TN.png"></a></div>
+                    <div class="galleryItem other"><a data-width="600" data-fancybox="gallery"  data-caption="Cutout based on the game Dragonage" class="imgLink" href="src/Dragonage2.jpg"><img class="galleryItemImg" src="src/Dragonage.jpg"></a></div>
+                    <div class="galleryItem other"><a data-width="600" data-fancybox="gallery"  data-caption="Orchid Vale passport for local school" class="imgLink" href="src/Orchid Vale Passport.png"><img class="galleryItemImg" src="src/thunbnails/Passport TN.png"></a></div>
+
+                    <div class="galleryItem branding"><a data-height="400" data-fancybox="gallery" data-caption="Voucher for Fish & Chip shop" class="imgLink" href="src/County Fayre Voucher.png"><img class="galleryItemImg" src="src/thunbnails/Voucher TN.png"></a></div>
+                    <div class="galleryItem branding"><a data-width="600" data-fancybox="gallery" data-caption="Poster advertising for local under 9s football team" class="imgLink" href="src/football club poster.png"><img class="galleryItemImg" src="src/thunbnails/Football TN.png"></a></div>
+                    <div class="galleryItem other"><a data-width="600" data-fancybox="gallery" data-caption="Icons for Legions Library website" class="imgLink" href="src/Horus 1.png"><img class="galleryItemImg" src="src/thunbnails/Horus TN.png"></a></div>
+                    
+                    <div class="galleryItem placeholder"></div>
+                    <div class="galleryItem logosPlaceholder hidden"></div>
+                    <div class="galleryItem brandingPlaceholder hidden"></div>
+                    <div class="galleryItem brandingPlaceholder hidden"></div>
+                    <div class="galleryItem brandingPlaceholder hidden"></div>
+                    <div class="galleryItem illustrationsPlaceholder hidden"></div>
+                    <div class="galleryItem illustrationsPlaceholder hidden"></div>
+                    <div class="galleryItem illustrationsPlaceholder hidden"></div>
+                    <div class="galleryItem otherPlaceholder hidden"></div>
+                    <div class="galleryItem otherPlaceholder hidden"></div>
+                    
                 </div>
             </div>
         </div>
