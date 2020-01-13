@@ -109,15 +109,28 @@ nav ul {
     height: 30px;
 }
 
+.hiddenItem {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
 .gallery {
-    width: 80%;
+    position: relative;
     padding-top: 1%;
+    max-width: 80%;
     display: flex;
-    margin-left: 20%;
+    left: 20%;
     align-content: space-evenly;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-wrap: wrap;
+}
+
+.placeholder, .logosPlaceholder, .brandingPlaceholder, .illustrationsPlaceholder, .otherPlaceholder {
+    border: white !important;
 }
 
 
@@ -267,6 +280,7 @@ nav ul {
 .switchLink {
     padding-left: 10px;
     padding-right: 10px;
+    text-decoration: underline;
     color: white;
 }
 
@@ -290,3 +304,52 @@ nav ul {
   .fancybox-slide--image {
     padding-bottom: 120px;
   }
+
+  /* Media Queries: Tablet Landscape */
+@media screen and (max-width: 1060px) {
+    #primary { width:67%; }
+    #secondary { width:30%; margin-left:3%;}  
+}
+
+/* Media Queries: Tabled Portrait */
+@media screen and (max-width: 768px) {
+    .sideBar {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        max-height: 20%;
+    }
+
+    .navList {
+        display: flex;
+        flex-direction: row;
+
+
+        text-align: center;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    .navItem {
+        padding-left: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .avatar {display: none;}
+    .about {display: none;}
+    .contact {display: none;}
+    .navHr {display: none;}
+
+    .gallery {
+        width: 100%;
+        margin-left: 0px;
+        padding-top: 30% !important;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+}

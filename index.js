@@ -18,25 +18,43 @@ $(document).ready(function() {
 		]
 	});
 
+	
 	$('[data-fancybox="gallery"]').fancybox({
 		idleTime: 0,
 		afterShow: function(instance, current) {
 			if (current.src == "src/Invite Front copy.png") {
 				current.$content.append(
 				`<p class="fancybox-extra">
-					<a href="javascript:$('.fancybox-image').attr('src', 'src/Invite Front copy.png');" class="switchLink">FRONT</a>
-					<a href="javascript:$('.fancybox-image').attr('src', 'src/Invite Back.png');" class="switchLink">BACK</a>
+					<a class="switchLink front">BACK</a>
 				</p>`
 				);
+				frontExists = true;
+			} else if (current.src == "src/Invite Back.png") {
+				current.$content.append(
+				`<p class="fancybox-extra">
+				    <a class="switchLink back">FRONT</a>
+				</p>`
+				);
+				backExists = true;
 			}
+			$('.front').one("click", function() {
+					instance.next();
+			})
+			$('.back').one("click", function() {
+					instance.previous();
+			})
+		},
+		beforeShow: function() {
+			$('.front').hide();
+			$('.back').hide()
 		}
-		//}
 	});
 
 	$("#portfolio").on("click", function() {
 		$("#portfolio").addClass("active");
 		$("#logos, #branding, #illustrations, #other").removeClass("active");
-		$(".logo, .branding, .illustration, .other").show();
+		$(".logo, .branding, .illustration, .other, .placeholder").show();
+		$(".logosPlaceholder, .brandingPlaceholder, .illustrationsPlaceholder, .otherPlaceholder, .hiddenItem").hide();
 		$(".galleryItem").children().attr("data-fancybox", "gallery");
 	});
 
@@ -45,7 +63,9 @@ $(document).ready(function() {
 		$("#portfolio, #branding, #illustrations, #other").removeClass("active");
 		$(".branding, .illustration, .other").hide();
 		$(".galleryItem").children().attr("data-fancybox", "gallery");
-		$(".logo").show();
+		$(".logo, .logosPlaceholder").show();
+		$(".brandingPlaceholder, .illustrationsPlaceholder, .otherPlaceholder, .placeholder").hide();
+		$(".hiddenItem").hide();
 		$(".logo").children().attr("data-fancybox", "logos");
 	});
 
@@ -54,7 +74,9 @@ $(document).ready(function() {
 		$("#portfolio, #logos, #illustrations, #other").removeClass("active");
 		$(".logo, .illustration, .other").hide();
 		$(".galleryItem").children().attr("data-fancybox", "gallery");
-		$(".branding").show();
+		$(".branding, .brandingPlaceholder").show();
+		$(".logosPlaceholder, .illustrationsPlaceholder, .otherPlaceholder, .placeholder").hide();
+		$(".hiddenItem").hide();
 		$(".branding").children().attr("data-fancybox", "branding");
 	});
 
@@ -63,8 +85,10 @@ $(document).ready(function() {
 		$("#portfolio, #logos, #branding, #other").removeClass("active");
 		$(".logo, .branding, .other").hide();
 		$(".galleryItem").children().attr("data-fancybox", "gallery");
-		$(".illustration").show();
-		$(".illustration").children().attr("data-fancybox", "branding");
+		$(".illustration, .illustrationsPlaceholder").show();
+		$(".logosPlaceholder, .brandingPlaceholder, .otherPlaceholder, .placeholder").hide();
+		$(".hiddenItem").hide();
+		$(".illustration").children().attr("data-fancybox", "illustrations");
 	});
 	
 	$("#other").on("click", function() {
@@ -72,7 +96,9 @@ $(document).ready(function() {
 		$("#portfolio, #logos, #branding, #illustrations").removeClass("active");
 		$(".logo, .branding, .illustration").hide();
 		$(".galleryItem").children().attr("data-fancybox", "gallery");
-		$(".other").show();
-		$(".other").children().attr("data-fancybox", "branding");
+		$(".other, .otherPlaceholder").show();
+		$(".logosPlaceholder, .brandingPlaceholder, .illustrationsPlaceholder, .placeholder").hide();
+		$(".hiddenItem").hide();
+		$(".other").children().attr("data-fancybox", "other");
 	});
 });
