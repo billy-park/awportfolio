@@ -50,7 +50,18 @@ $(document).ready(function() {
 		}
 	});
 
+	$("#aboutMe").on("click", function() {
+		$(".galleryContainer").hide();
+		$(".hiddenAbout").show();
+	})
+
+	$("#contactMe").on("click", function() {
+		$('html, body').animate({scrollTop:$(document).height()}, 'slow');
+	})
+
 	$("#portfolio").on("click", function() {
+		$(".galleryContainer").show();
+		$(".hiddenAbout").hide();
 		$("#portfolio").addClass("active");
 		$("#logos, #branding, #illustrations, #other").removeClass("active");
 		$(".logo, .branding, .illustration, .other, .placeholder").show();
@@ -59,6 +70,8 @@ $(document).ready(function() {
 	});
 
 	$("#logos").on("click", function() {
+		$(".galleryContainer").show();
+		$(".hiddenAbout").hide();
 		$("#logos").addClass("active");
 		$("#portfolio, #branding, #illustrations, #other").removeClass("active");
 		$(".branding, .illustration, .other").hide();
@@ -70,6 +83,8 @@ $(document).ready(function() {
 	});
 
 	$("#branding").on("click", function() {
+		$(".galleryContainer").show();
+		$(".hiddenAbout").hide();
 		$("#branding").addClass("active");
 		$("#portfolio, #logos, #illustrations, #other").removeClass("active");
 		$(".logo, .illustration, .other").hide();
@@ -81,6 +96,8 @@ $(document).ready(function() {
 	});
 
 	$("#illustrations").on("click", function() {
+		$(".galleryContainer").show();
+		$(".hiddenAbout").hide();
 		$("#illustrations").addClass("active");
 		$("#portfolio, #logos, #branding, #other").removeClass("active");
 		$(".logo, .branding, .other").hide();
@@ -92,6 +109,8 @@ $(document).ready(function() {
 	});
 	
 	$("#other").on("click", function() {
+		$(".galleryContainer").show();
+		$(".hiddenAbout").hide();
 		$("#other").addClass("active");
 		$("#portfolio, #logos, #branding, #illustrations").removeClass("active");
 		$(".logo, .branding, .illustration").hide();
